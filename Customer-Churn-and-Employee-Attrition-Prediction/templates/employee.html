@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attrition Prediction</title>
+    <link rel="stylesheet" href={{css_url}}>
+</head>
+<body>
+    <header>
+        <h1>Employee Attrition Prediction</h1>
+    </header>
+    <main>
+        <form action="/employee-prediction" class="main-form" method="post">
+            <div class="form-row">
+                <label for="age" class="form-label-2">Age</label>
+                <input type="text" name="age" id="age" class="form-input-2" required>
+            </div>
+            <div class="form-row">
+                <label for="daily_rate" class="form-label-2">Daily Rate</label>
+                <input type="text" name="daily_rate" id="daily_rate" class="form-input-2" required>
+            </div>
+            <div class="form-row">
+                <label for="environment_satisfaction" class="form-label-2">Environment Satisfaction</label>
+                <select class="form-input-2" name="environment_satisfaction" required="required">
+                    <option value="1" class="form-input-2" selected>1</option>
+                    <option value="2" class="form-input-2">2</option>
+                    <option value="3" class="form-input-2">3</option>
+                    <option value="4" class="form-input-2">4</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="job_level" class="form-label-2">Job Level</label>
+                <select class="form-input-2" name="job_level" required="required">
+                    <option value="1" class="form-input-2" selected>1</option>
+                    <option value="2" class="form-input-2">2</option>
+                    <option value="3" class="form-input-2">3</option>
+                    <option value="4" class="form-input-2">4</option>
+                    <option value="5" class="form-input-2">5</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="job_satisfaction" class="form-label-2">Job Satisfaction</label>
+                <select class="form-input-2" name="job_satisfaction" required="required">
+                    <option value="1" class="form-input-2" selected>1</option>
+                    <option value="2" class="form-input-2">2</option>
+                    <option value="3" class="form-input-2">3</option>
+                    <option value="4" class="form-input-2">4</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="monthly_income" class="form-label-2">Monthly Income</label>
+                <input type="text" name="monthly_income" id="monthly_income" class="form-input-2" required>
+            </div>
+            <div class="form-row">
+                <label for="companies_worked" class="form-label-2">No. Companies Worked</label>
+                <input type="text" name="companies_worked" id="companies_worked" class="form-input-2" required>
+            </div>
+            <div class="form-row">
+                <label for="salary_hike" class="form-label-2">Salary Hike (%)</label>
+                <input type="text" name="salary_hike" id="salary_hike" class="form-input-2" required>
+            </div>
+            <div class="form-row">
+                <label for="stock_option" class="form-label-2">Stock option Level</label>
+                <select class="form-input-2" name="stock_option" required="required">
+                    <option value="0" class="form-input-2" selected>0</option>
+                    <option value="1" class="form-input-2">1</option>
+                    <option value="2" class="form-input-2">2</option>
+                    <option value="3" class="form-input-2">3</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="total_working_years" class="form-label-2">Total Working Years</label>
+                <input type="text" name="total_working_years" id="total_working_years" class="form-input-2" required>
+            </div>
+            <div class="form-row">
+                <label for="work_life_balance" class="form-label-2">Work Life Balance</label>
+                <select class="form-input-2" name="work_life_balance" required="required">
+                    <option value="1" class="form-input-2" selected>1</option>
+                    <option value="2" class="form-input-2">2</option>
+                    <option value="3" class="form-input-2">3</option>
+                    <option value="4" class="form-input-2">4</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="years_at_company" class="form-label-2">Years At Company</label>
+                <input type="text" name="years_at_company" id="years_at_company" class="form-input-2" required>
+            </div>
+            <div class="form-row">
+                <label for="years_since_last_promotion" class="form-label-2">Years Since Promotion</label>
+                <input type="text" name="years_since_last_promotion" id="years_since_last_promotion" class="form-input-2" required>
+            </div>
+            <div class="form-row">
+                <label for="department" class="form-label-2">Department</label>
+                <select class="form-input-2" name="department" required="required">
+                    <option value="" class="form-input-2" selected>Select</option>
+                    <option value="research" class="form-input-2">Research & Development</option>
+                    <option value="sales" class="form-input-2">Sales</option>
+                    <option value="hr" class="form-input-2">Human Resources</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="job_role" class="form-label-2">Job Role</label>
+                <select class="form-input-2" name="job_role" required="required">
+                    <option value="" class="form-input-2" selected>select</option>
+                    <option value="manager" class="form-input-2">Manager</option>
+                    <option value="human_resources" class="form-input-2">Human Resources</option>
+                    <option value="sales_executive" class="form-input-2">Sales Executive</option>
+                    <option value="sales_representative" class="form-input-2">Sales Representative</option>
+                    <option value="research_scientist" class="form-input-2">Research Scientist</option>
+                    <option value="research_director" class="form-input-2">Research Director</option>
+                    <option value="laboratory_technician" class="form-input-2">Laboratory Technician</option>
+                    <option value="manufacturing_director" class="form-input-2">Manufacturing Director</option>
+                    <option value="healthcare_representative" class="form-input-2">Healthcare Representative</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="marital_status" class="form-label-2">Marital Status</label>
+                <select class="form-input-2" name="marital_status" required="required">
+                    <option value="" class="form-input-2" selected>select</option>
+                    <option value="single" class="form-input-2">Single</option>
+                    <option value="married" class="form-input-2">Married</option>
+                    <option value="divorced" class="form-input-2">Divorced</option>
+                </select>
+            </div>
+            <!-- <div class="form-row">
+                <label for="employee_count" class="form-label-2">Emoployee Count</label>
+                <select name="employee_count" class="form-input-2" required="required">
+                    <option value="1" class="form-input-2">1</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="employee_number" class="form-label-2">Employee Number</label>
+                <input type="text" name="employee_number" id="employee_number" class="form-input-2" required>
+            </div>
+            <div class="form-row">
+                <label for="hourly_rate" class="form-label-2">Hourly Rate</label>
+                <input type="text" name="hourly_rate" id="hourly_rate" class="form-input-2" required>
+            </div>
+            <div class="form-row">
+                <label for="job_involvment" class="form-label-2">Job Involvment</label>
+                <select class="form-input-2" name="job_involvment" required="required">
+                    <option value="1" class="form-input-2" selected>1</option>
+                    <option value="2" class="form-input-2">2</option>
+                    <option value="3" class="form-input-2">3</option>
+                    <option value="4" class="form-input-2">4</option>
+                </select>
+            </div> -->
+            <div class="form-row">
+                <fieldset>
+                    <legend>Overtime</legend>
+                    <input type="radio" name="overtime" id="yes" value="yes" required>
+                    <label for="yes" class="fieldset-label">Yes</label>
+                    <input type="radio" name="overtime" id="no" value="no" required>
+                    <label for="no" class="fieldset-label">No</label>
+                </fieldset>
+            </div>
+            <div class="form-row">
+                <fieldset>
+                    <legend>Gender</legend>
+                    <input type="radio" name="gender" id="male" value="male" required>
+                    <label for="male" class="fieldset-label">Male</label>
+                    <input type="radio" name="gender" id="female" value="female" required>
+                    <label for="female" class="fieldset-label">Female</label>
+                </fieldset>
+            </div>
+            <div class="form-row">
+                <input type="submit" class="predict" value="Predict">
+                <input type="reset" class="reset" value="Reset">
+            </div>
+        </form>
+    </main>
+</body>
+</html>

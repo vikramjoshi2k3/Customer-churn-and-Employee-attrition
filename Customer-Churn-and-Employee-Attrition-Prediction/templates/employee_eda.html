@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attrition EDA</title>
+    <link rel="stylesheet" href={{css_url}}>
+</head>
+
+<body>
+    <header>
+        <h1>Employee Attrition EDA</h1>
+    </header>
+    <main>
+        <div class="article">
+            <h2>Introduction</h2>
+            <div class="content">
+                <p>The issue of keeping one's employees happy and satisfied is a perennial and age-old challenge. If an
+                    employee you have invested so much time and money leaves for "greener pastures", then this would
+                    mean that you would have to spend even more time and money to hire somebody else. In the spirit of
+                    ML, we therefore turn to our predictive modelling capabilities to see if we can predict employee
+                    attrition.</p>
+                <p><strong>Exploratory Data Analysis: </strong>We explore the dataset by taking a look at the feature
+                    distributions, how correlated one feature is to the other and create some Seaborn and Plotly
+                    visualisations.</p>
+            </div>
+            <h2>KDEplots</h2>
+            <div class="content">
+                <p>KDE (Kernel Density Estimation) plot is a type of visualization technique used to represent the
+                    probability density function of a continuous random variable.</p>
+                <p>A KDE plot displays the density estimate of a variable, which is a smoothed version of the histogram.
+                    In
+                    a KDE plot, a kernel function is placed at each data point and then smoothed out to create a
+                    continuous
+                    density estimate.</p>
+                <p>A bivariate KDE plot is a type of visualization that shows the joint distribution of two variables
+                    using
+                    a kernel density estimate.</p>
+                <p>In a bivariate KDE plot, a two-dimensional density estimate is created by placing a kernel function
+                    at
+                    each point in the two-dimensional space. These kernel functions are then smoothed out to create a
+                    continuous surface that represents the density of the data.</p>
+                <p>The plot shows the joint distribution of the two variables, with contours or shading indicating the
+                    areas
+                    of highest density. This can help identify patterns and relationships between the two variables,
+                    such as
+                    correlation or clustering.</p>
+                <p>With the help of Seaborn plotting library we can generate bivariate plots as follows:</p>
+                <div class="image">
+                    <img class="emp-kde" src={{employee_kdeplots}}>
+                </div>
+            </div>
+            <h2>Pairplot Visualisation</h2>
+            <div class="content">
+                <p>Seaborn's pairplot is a type of visualization that allows for the creation of a grid of plots, where
+                    each
+                    variable in a dataset is plotted against every other variable. This creates a visual representation
+                    of
+                    the pairwise relationships between the variables, making it easier to identify patterns and
+                    correlations
+                    in the data.</p>
+                <p>Each plot in the pairplot displays a scatterplot of the two variables and a histogram of each
+                    variable's
+                    distribution. Additionally, diagonal plots show a kernel density estimate of the distribution of
+                    each
+                    variable. Pairplots can also be customized with various options, including adding regression lines,
+                    changing the color scheme, and displaying categorical variables using different symbols or colors.
+                    Overall, pairplot is a powerful tool for exploratory data analysis, as it allows for quick and
+                    comprehensive visual inspection of relationships between variables in a dataset.</p>
+                <p>We can create some Seaborn pairplots and set it against the target variable which is our Attrition
+                    column
+                    to get a feel for how the various features are distributed vis-a-vis employee attrition.</p>
+                <div class="image">
+                    <img src={{employee_paiplots}}>
+                </div>
+            </div>
+            <h2>Feature Ranking via the Random Forest</h2>
+            <div class="content">
+                <p>The Random Forest classifier in Sklearn also contains a very convenient attribute feature_importances_ which tells us which features within our dataset has been given most importance through the Random Forest algorithm. Shown below is a Plotly diagram of the various feature importances.</p>
+                <div class="image">
+                    <img src={{scatterplot}}>
+                </div>
+            </div>
+            <p>Overall, EDA is an essential step in the data analysis process, as it can help identify issues, inform modeling and analysis decisions, and communicate insights to stakeholders.</p>
+        </div>
+        <div class="container">
+            <a href="/" class="button">Go Back</a>
+        </div>
+    </main>
+</body>
+
+</html>

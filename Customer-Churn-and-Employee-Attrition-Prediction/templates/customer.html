@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href={{css_url}}>
+</head>
+
+<body>
+    <header>
+        <h1>Customer Churn Prediction</h1>
+    </header>
+
+    <main>
+        <form class='main-form' action="/customer-prediction" method="post">
+            <div class="form-row">
+                <label for="credit_score" class="form-label">Credit Score</label>
+                <input type="text" name="credit_score" id="credit_score" class="form-input" required>
+            </div>
+            <div class="form-row">
+                <label for="age" class="form-label">Age</label>
+                <input type="text" name="age" id="age" class="form-input" required>
+            </div>
+            <div class="form-row">
+                <label for="tenure" class="form-label">Tenure</label>
+                <input type="text" name="tenure" id="tenure" class="form-input" required>
+            </div>
+            <div class="form-row">
+                <label for="balance" class="form-label">Balance</label>
+                <input type="text" name="balance" id="balance" class="form-input" required>
+            </div>
+            <div class="form-row">
+                <label for="no_of_products" class="form-label">Number of Products</label>
+                <input type="text" name="no_of_products" id="no_of_products" class="form-input" required>
+            </div>
+            <div class="form-row">
+                <label for="estimated_salary" class="form-label">Estimated Salary</label>
+                <input type="text" name="estimated_salary" id="estimated_salary" class="form-input" required>
+            </div>
+            <div class="form-row">
+                <label for="geography" class="form-label">Geography</label>
+                <select class="form-input" name="geography" required="required">
+                    <option value="" class="form-input" selected>Country</option>
+                    <option value="france" class="form-input">France</option>
+                    <option value="germany" class="form-input">Germany</option>
+                    <option value="spain" class="form-input">Spain</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <fieldset>
+                    <legend>Credit Card</legend>
+                    <input type="radio" name="has_cr_card" id="yes1" value="1" required>
+                    <label for="yes1" class="fieldset-label">Yes</label>
+                    <input type="radio" name="has_cr_card" id="no1" value="0" required>
+                    <label for="no1" class="fieldset-label">No</label>
+                </fieldset>
+            </div>
+            <div class="form-row">
+                <fieldset>
+                    <legend>Active Member</legend>
+                    <input type="radio" name="is_active_member" id="yes2" value="1" required>
+                    <label for="yes2" class="fieldset-label">Yes</label>
+                    <input type="radio" name="is_active_member" id="no2" value="0" required>
+                    <label for="no2" class="fieldset-label">No</label>
+                </fieldset>
+            </div>
+            <div class="form-row">
+                <fieldset>
+                    <legend>Gender</legend>
+                    <input type="radio" name="gender" id="male" value="1" required>
+                    <label for="male" class="fieldset-label">Male</label>
+                    <input type="radio" name="gender" id="female" value="0" required>
+                    <label for="female" class="fieldset-label">Female</label>
+                </fieldset>
+                <div class="form-row">
+                    <input type="submit" class="predict" value="Predict">
+                    <input type="reset" class="reset" value="Reset">
+                </div>
+        </form>
+    </main>
+</body>
+
+</html>

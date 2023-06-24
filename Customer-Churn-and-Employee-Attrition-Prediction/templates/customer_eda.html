@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn EDA</title>
+    <link rel="stylesheet" href={{css_url}}>
+</head>
+
+<body>
+    <header>
+        <h1>Customer Churn EDA</h1>
+    </header>
+    <div class="article">
+        <h2>Introduction</h2>
+        <div class="content">
+            <p>Customer churn prediction is the process of identifying customers who are likely to stop using a product
+                or service in the near future. This technique is widely used in various industries, including
+                telecommunications, banking, and e-commerce, to forecast customer behavior and develop retention
+                strategies. Churn prediction models can be built using machine learning algorithms and historical
+                customer data to predict the likelihood of customer churn.</p>
+            <p><strong>Exploratory Data Analysis: </strong>We explore the dataset by taking a look at the feature
+                distributions, how correlated one feature is to the other and create some Seaborn and Plotly
+                visualisations.</p>
+        </div>
+        <h2>Jointplots</h2>
+        <div class="content">
+            <p>Jointplots are a type of data visualization technique used to display the relationship between two
+                variables in a dataset. They combine two different plots into one, showing a scatter plot of the data
+                along with a probability density function or a histogram for each variable. This helps to identify
+                patterns, correlations, and outliers in the data, making it easier to interpret and draw insights from
+                the data. Jointplots are commonly used in data analysis and statistical modeling to understand the
+                relationship between two variables and make data-driven decisions.</p>
+            <p>The plot below shows distribution of Balance against CreditScore and age against EstimatedSalary of a
+                customer:</p>
+            <div class="image-div">
+                <img class="image-twice" src="{{jointplot1}}">
+                <img class="image-twice" src="{{jointplot2}}">
+            </div>
+        </div>
+        <h2>Pairplot Visualisation</h2>
+        <div class="content">
+            <p>Seaborn's pairplot is a type of visualization that allows for the creation of a grid of plots, where
+                each
+                variable in a dataset is plotted against every other variable. This creates a visual representation
+                of
+                the pairwise relationships between the variables, making it easier to identify patterns and
+                correlations
+                in the data.</p>
+            <p>Each plot in the pairplot displays a scatterplot of the two variables and a histogram of each
+                variable's
+                distribution. Additionally, diagonal plots show a kernel density estimate of the distribution of
+                each
+                variable. Pairplots can also be customized with various options, including adding regression lines,
+                changing the color scheme, and displaying categorical variables using different symbols or colors.
+                Overall, pairplot is a powerful tool for exploratory data analysis, as it allows for quick and
+                comprehensive visual inspection of relationships between variables in a dataset.</p>
+            <div class="image">
+                <img src={{pairplot}}>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <a href="/" class="button">Go Back</a>
+    </div>
+</body>
+
+</html>
